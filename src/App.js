@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import { About } from './components/about-section/about-section.component';
 import './App.css';
 
 class App extends Component{
@@ -13,7 +15,9 @@ class App extends Component{
 
   render(){
     return (
-      <h1>Hello World</h1>
+      <div>
+        <About />
+      </div>
     )
   }
 }
