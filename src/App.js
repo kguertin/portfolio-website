@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { Nav } from './components/nav/nav.component';
 import { About } from './components/about-section/about-section.component';
 import './App.css';
 
@@ -8,6 +9,7 @@ class App extends Component{
     super();
 
     this.state = {
+      currentSection: 'about' 
 
     }
 
@@ -16,7 +18,8 @@ class App extends Component{
   render(){
     return (
       <div>
-        <About />
+        <Nav />
+        { this.state.currentSection === 'about' && <About /> }
       </div>
     )
   }
