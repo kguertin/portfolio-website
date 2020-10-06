@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { saveAs } from 'file-saver';
-
 import './nav.styles.css';
 
 export const Nav = ({changeSection}) => {
