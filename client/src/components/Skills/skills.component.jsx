@@ -2,12 +2,17 @@ import React from 'react';
 
 import './skills.style.css';
 
-export const Skills = () => {
+export const Skills = (props) => {
 
         return (
-            <div>
-                <h1>Skills</h1>
-                <p>hello</p>
+            <div className='skill-container'>
+                {props.skills.map(skill => {
+                    return (
+                    <div className='skill'>
+                        <p>{skill}</p>
+                    </div>
+                    )
+                })}
             </div>
         )
 }

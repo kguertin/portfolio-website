@@ -8,20 +8,15 @@ export class Projects extends Component{
           super();
 
           this.state = {
-               skills: [],
-               activeSkills: []
+               skills: ['Javascript', 'PHP', 'Ruby', "Node", 'React', 'SQL', 'MongoDB'],
+               selectedSkills: [],
+               selectAll: true
           }
-     }
-
-     componentDidMount() {
-          fetch('http://localhost:5000/skills')
-               .then (res => console.log(res))
-               .catch(err => console.log(err))
      }
 
      render() {
           return (
-               <Skills />
+               <Skills skills={this.state.skills}/>
           )
      }
 }
