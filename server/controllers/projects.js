@@ -11,3 +11,9 @@ exports.getResume = (req, res, next) => {
     
       src.pipe(res); 
 }
+
+exports.getSkills = (req, res, next) => {
+  console.log('route hit')
+  res.status(200).json({message: 'hello'});
+
+}
