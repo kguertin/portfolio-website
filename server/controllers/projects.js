@@ -14,4 +14,5 @@ exports.getResume = (req, res, next) => {
 
 exports.getProjects = (req, res, next) => {
   console.log('hit')
+  res.status(200).json({msg: 'Hello'})
 }
