@@ -8,11 +8,12 @@ export const Skills = (props) => {
             <div className='skill-container'>
                 {props.skills.map(skill => {
                     return (
-                    <div className='skill'>
+                    <div className='skill-active'>
                         <p>{skill}</p>
                     </div>
                     )
                 })}
+                <div className="skill-active"><p>Select All</p></div>
             </div>
         )
 }

@@ -16,7 +16,10 @@ export class Projects extends Component{
 
      render() {
           return (
+               <>
+               <h1 className="header">Some of My Work</h1>
                <Skills skills={this.state.skills}/>
+               </>
           )
      }
 }
