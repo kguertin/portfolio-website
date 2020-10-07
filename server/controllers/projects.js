@@ -11,3 +11,7 @@ exports.getResume = (req, res, next) => {
     
       src.pipe(res); 
 }
+
+exports.getProjects = (req, res, next) => {
+  console.log('hit')
+}
