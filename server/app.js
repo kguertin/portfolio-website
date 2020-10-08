@@ -1,16 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+
+const MONGODB_URI = 'mongodb+srv://kevin:node1234@cluster0-kmmuu.mongodb.net/portfolio-projects';
 
 const app = express();
 
 const projectRoutes = require('./routes/projects');
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.setHeader('Access-Control-Allow-Methods', "GET, POST, PUT, PATCH, DELETE");
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Disposition, Content-Transfer-Encoding');
-    next();
-})
+app.use(cors())
 
 app.use(projectRoutes);
 
@@ -18,3 +16,6 @@ app.listen(5000, () => {
     console.log('Server running on port 5000');
 })
 
+mongoose.connect(MONGODB_URI)
+    .then(app.listen(8000, () => console.log('Server running on port 8000')))
+    .catch(err => console.log(err))
