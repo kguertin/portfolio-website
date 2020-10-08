@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path')
 
+const Project = require('../model/projects');
+
 exports.getResume = (req, res, next) => {
     const src = fs.createReadStream(path.join('data', 'resume.pdf'));
     res.writeHead(200, {
@@ -12,7 +14,8 @@ exports.getResume = (req, res, next) => {
       src.pipe(res); 
 }
 
-exports.getProjects = (req, res, next) => {
-  console.log('hit')
-  res.status(200).json({msg: 'Hello'})
+exports.getProjects = async (req, res, next) => {
+  const projects = await Project.find();
+  console.log(projects)
+  res.status(200).json({projects})
 }

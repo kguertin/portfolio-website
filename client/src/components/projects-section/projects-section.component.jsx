@@ -19,11 +19,14 @@ export class ProjectsSection extends Component{
      componentDidMount() {
           fetch('http://localhost:5000/getProjects', {
                headers: {
-                    "Content-Type": 'application/json',
-                    "Access-Control-Allow-Origin": "*"
+                    "Content-Type": 'application/json'
                }
           })
-          .then(res => console.log(res))
+          .then(response => response.json())
+          .then(projects => {
+               this.setState({projects: projects.projects})
+               console.log(this.state)
+          })
           .catch(err => console.log(err)) 
      }
 
