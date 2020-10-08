@@ -23,10 +23,7 @@ export class ProjectsSection extends Component{
                }
           })
           .then(response => response.json())
-          .then(projects => {
-               this.setState({projects: projects.projects})
-               console.log(this.state)
-          })
+          .then(projects => this.setState({projects: projects.projects}))
           .catch(err => console.log(err)) 
      }
 
@@ -35,7 +32,7 @@ export class ProjectsSection extends Component{
                <>
                <h1 className="header">My Projects</h1>
                <Skills skills={this.state.skills}/>
-               <Projects />
+               <Projects projects={this.state.projects}/>
                </>
           )
      }

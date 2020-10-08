@@ -1,0 +1,30 @@
+.project-container {
+    width: 90vw;
+    margin: 25px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.project-card {
+    border: 1px solid #4b3832;
+    text-align: center;
+    background: #be9b7b;
+    border-radius: 5px;
+    color: #4b3832
+}
+
+.project-skills {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 7.5px;
+    margin: 10px 0;
+}
+
+.skill-tag {
+    background: #854442;
+    margin: 0 10px;
+    border-radius: 10px;
+    padding: 5px 0;
+    color:  #301934;
+}

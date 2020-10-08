@@ -7,14 +7,14 @@
 }
 
 .skill-active {
-    background: #08A4BD;
+    background: #854442;
     border-radius: 5px;
     text-align: center;
-    color: #301934;
+    color:  #fff4e6;
     font-size: 20px;
 }
 
 .skill-active:hover {
-    background: #00635D;
+    background:#be9b7b;
 }
 
