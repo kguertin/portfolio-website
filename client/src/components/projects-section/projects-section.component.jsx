@@ -10,7 +10,7 @@ export class ProjectsSection extends Component{
 
           this.state = {
                skills: ['Javascript', 'PHP', 'Ruby', "Node", 'React', 'SQL', 'MongoDB'],
-               selectedSkills: ['Javascript', 'PHP', 'Ruby', "Node", 'React', 'SQL', 'MongoDB'],
+               selectedSkills: [],
                selectAll: true,
                projects: []
           }
@@ -25,18 +25,33 @@ export class ProjectsSection extends Component{
           .then(response => response.json())
           .then(projects => this.setState({projects: projects.projects}))
           .catch(err => console.log(err)) 
+          
+          this.setState({selectedSkills: this.state.skills})
      }
 
      handleSelectAll = () => {
-          this.state.selectAll === true ? this.setState({selectAll: false, selectedSkills: []}) : this.setState({selectAll: true, selectedSkills: this.state.skills});
-          
+          this.state.selectAll === true ? this.setState({selectAll: false, selectedSkills: []}) : this.setState({selectAll: true, selectedSkills: this.state.skills}); 
+     }
+
+     handleSelectSkill = skill => {
+          if(this.state.selectedSkills.includes(skill)) {
+               const updatedSkills = this.state.selectedSkills.filter(i => i !== skill);
+               this.setState({selectedSkills: updatedSkills})
+          } else {
+               const updatedSkills = [...this.state.selectedSkills, skill];
+               this.setState({selectedSkills: updatedSkills});
+          }
      }
 
      render() {
           return (
                <>
                     <h1 className="header">My Projects</h1>
-                    <Skills handleSelectAll={this.handleSelectAll} skills={this.state.skills}/>
+                    <Skills 
+                         handleSelectSkill={this.handleSelectSkill}
+                         handleSelectAll={this.handleSelectAll} 
+                         skills={this.state.skills}
+                    />
                     <div className="project-container">
                          {this.state.projects.map(project => {
                               let display;
