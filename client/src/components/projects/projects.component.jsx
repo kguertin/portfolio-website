@@ -17,6 +17,12 @@ export const Projects = ({projects}) => {
                             }) 
                             }
                         </div>
+                        <div className="project-links">
+                            <a className="link" href={project.githubUrl} target="_blank" rel="noopener noreferrer"><p>Github</p></a>
+                            {project.liveUrl && 
+                            <a className="link" href={project.liveUrl} target="_blank" rel="noopener noreferrer"><p>Live</p></a>
+                            }
+                        </div>
                     </div>
                 )
             })}

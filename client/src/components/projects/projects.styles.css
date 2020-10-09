@@ -26,6 +26,25 @@
     background: #854442;
     margin: 0 10px;
     border-radius: 10px;
-    padding: 5px 0;
+    padding: 10px 0;
     color:  #fff4e6;
+}
+
+.project-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link {
+    margin: 0 5px;
+    text-decoration: none;
+    background: #4b3832;
+    color: #fff4e6;
+    padding: 2px 15px;
+    border-radius: 10px;
+}
+
+.link:hover {
+    background: #854442;
 }
