@@ -1,11 +1,3 @@
-.project-container {
-    width: 90vw;
-    margin: 25px auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15px;
-}
-
 .project-card {
     border: 1px solid #4b3832;
     text-align: center;
@@ -26,7 +18,7 @@
     background: #854442;
     margin: 0 10px;
     border-radius: 10px;
-    padding: 10px 0;
+    padding: 10px 15px;
     color:  #fff4e6;
 }
 
