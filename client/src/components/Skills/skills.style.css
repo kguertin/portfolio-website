@@ -8,14 +8,27 @@
 
 .skill-active {
     background: #854442;
+    color:  #fff4e6;
     border-radius: 5px;
     text-align: center;
-    color:  #fff4e6;
     font-size: 20px;
 }
 
 .skill-active:hover {
     background:#be9b7b;
-    color: #4b3832
+    color: #4b3832;
+}
+
+.skill-not-active {
+    background:#be9b7b;
+    color: #4b3832;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.skill-not-active:hover {
+    background: #854442;
+    color:  #fff4e6;
 }
 

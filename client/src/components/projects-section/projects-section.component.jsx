@@ -30,7 +30,11 @@ export class ProjectsSection extends Component{
      }
 
      handleSelectAll = () => {
-          this.state.selectAll === true ? this.setState({selectAll: false, selectedSkills: []}) : this.setState({selectAll: true, selectedSkills: this.state.skills}); 
+          this.setState({selectAll: true, selectedSkills: this.state.skills}); 
+     }
+
+     handleClearProjects = () => {
+          this.setState({selectAll: false, selectedSkills: []})
      }
 
      handleSelectSkill = skill => {
@@ -50,7 +54,9 @@ export class ProjectsSection extends Component{
                     <Skills 
                          handleSelectSkill={this.handleSelectSkill}
                          handleSelectAll={this.handleSelectAll} 
+                         handleClearProjects={this.handleClearProjects}
                          skills={this.state.skills}
+                         selectedSkills={this.state.selectedSkills}
                     />
                     <div className="project-container">
                          {this.state.projects.map(project => {
