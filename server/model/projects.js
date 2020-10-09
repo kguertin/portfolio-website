@@ -17,6 +17,10 @@ const projectSchema = new Schema(
           }],
           required: true
       }, 
+      description: {
+          type: String,
+          required: true
+      },
       githubUrl: {
           type: String,
           required: true
