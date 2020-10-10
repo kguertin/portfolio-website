@@ -7,10 +7,9 @@ import './contact-section.styles.css';
 
 export const Contact = () => {
     return (
-        <>
-            <h1>Contact</h1>
+        <div className="contact-container">
             <ContactForm />
             <Socials />
-        </>
+        </div>
     )
 }

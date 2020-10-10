@@ -21,21 +21,29 @@ export class ContactForm extends Component{
         this.setState({message: event.target.value})
     }
 
+    handleSubmit = () => {
+       fetch('http://localhost:8000/email', {
+           method: "POST"
+       })
+    }
+
     render() {
         return (
-           <div>
-                <p>{this.state.contact}</p>
-                <p>{this.state.message}</p>
-               <div className="form-section">
-                    <label>
-                        Contact Email: 
-                        <input type="email" value={this.state.contact} onChange={this.handleContactChange} />
+           <div className="form-container">
+               <div className="form">
+                <div className="form-section">
+                        <label>
+                            Contact Email: 
+                            <input type="email" value={this.state.contact} onChange={this.handleContactChange} />
+                        </label>
+                </div>
+                <div className="form-section">
+                    <label>Message: 
+                        <textarea value={this.state.message} onChange={this.handleMessageChange} id="" cols="30" rows="10"></textarea>
                     </label>
+                </div>
+                <button onClick={this.handleSubmit}>Submit</button>
                </div>
-               <div className="form-section">
-                    <textarea value={this.state.message} onChange={this.handleMessageChange} id="" cols="30" rows="10"></textarea>
-               </div>
-               <button>Submit</button>
            </div>
         )
     }
