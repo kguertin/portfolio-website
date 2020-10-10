@@ -58,6 +58,7 @@ export class ProjectsSection extends Component{
                          skills={this.state.skills}
                          selectedSkills={this.state.selectedSkills}
                     />
+                    {this.state.selectedSkills.length ?
                     <div className="project-container">
                          {this.state.projects.map(project => {
                               let display;
@@ -70,7 +71,9 @@ export class ProjectsSection extends Component{
                                    return <Project project={project} />
                               }
                          })}
-                    </div>
+                    </div> :
+                    <h1 className="header">Please select a skill to see associated projects.</h1>
+     }
                </>
           )
      }

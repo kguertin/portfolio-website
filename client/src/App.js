@@ -26,7 +26,7 @@ class App extends Component{
   render(){
     return (
       <div>
-        <Nav changeSection={this.changeSection} />
+        <Nav currentSection={this.state.currentSection} changeSection={this.changeSection} />
         { this.state.currentSection === 'about' && <About /> }
         { this.state.currentSection === 'projects' && <ProjectsSection /> }
         { this.state.currentSection === 'contact' && <Contact /> }

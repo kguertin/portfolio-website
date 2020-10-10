@@ -15,3 +15,11 @@
 .nav-item:hover {
     color: #854442;
 }
+
+.nav-active {
+    color: #854442;
+}
+
+.nav-active:hover{
+    color: #fff4e6;
+}
