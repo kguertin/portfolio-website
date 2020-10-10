@@ -16,6 +16,9 @@ exports.getResume = (req, res, next) => {
 
 exports.getProjects = async (req, res, next) => {
   const projects = await Project.find();
-  console.log(projects)
   res.status(200).json({projects})
+}
+
+exports.postEmail = async (req, res, next) => {
+  console.log('hit')
 }
