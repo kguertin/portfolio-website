@@ -34,12 +34,12 @@ export class ContactForm extends Component{
                 <div className="form-section">
                         <label>
                             Contact Email: 
-                            <input type="email" value={this.state.contact} onChange={this.handleContactChange} />
+                            <input className="email-input" type="email" value={this.state.contact} onChange={this.handleContactChange} />
                         </label>
                 </div>
                 <div className="form-section">
                     <label>Message: 
-                        <textarea value={this.state.message} onChange={this.handleMessageChange} id="" cols="30" rows="10"></textarea>
+                        <textarea className="message-input" value={this.state.message} onChange={this.handleMessageChange} id="" cols="30" rows="10"></textarea>
                     </label>
                 </div>
                 <button onClick={this.handleSubmit}>Submit</button>
