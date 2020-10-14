@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     color: #fff4e6;
+    width: 60%;
 }
 
 .form-section {
@@ -10,6 +11,7 @@
 
 .email-input {
     margin-left: 10px;
+    width: 100%;
 }
 
 .message-input {

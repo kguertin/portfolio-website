@@ -9,19 +9,18 @@ export class ContactForm extends Component{
 
         this.state = {
             message: '',
-            contact: ''
+            email: ''
         }
     }
 
-    handleContactChange = (event) => {
-        this.setState({contact: event.target.value})
+    handleChange = e => {
+        const {name, value} = e.target;
+        this.setState({[name]: value});
     }
 
-    handleMessageChange = (event) => {
-        this.setState({message: event.target.value})
-    }
+    handleSubmit = e => {
+        e.preventDefault();
 
-    handleSubmit = () => {
        fetch('http://localhost:8000/email', {
            method: "POST"
        })
@@ -30,20 +29,20 @@ export class ContactForm extends Component{
     render() {
         return (
            <div className="form-container">
-               <div className="form">
+               <form onSubmit={this.handleSubmit}>
                 <div className="form-section">
                         <label>
                             Contact Email: 
-                            <input className="email-input" type="email" value={this.state.contact} onChange={this.handleContactChange} />
+                            <input className="email-input" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
                         </label>
                 </div>
                 <div className="form-section">
                     <label>Message: 
-                        <textarea className="message-input" value={this.state.message} onChange={this.handleMessageChange} id="" cols="30" rows="10"></textarea>
+                        <textarea className="message-input" name="message" value={this.state.message} onChange={this.handleChange} id="" cols="30" rows="10"></textarea>
                     </label>
                 </div>
-                <button onClick={this.handleSubmit}>Submit</button>
-               </div>
+                <button type="submit">Submit</button>
+               </form>
            </div>
         )
     }
