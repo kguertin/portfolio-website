@@ -8,6 +8,7 @@ import './contact-section.styles.css';
 export const Contact = () => {
     return (
         <div className="contact-container">
+            <h1 className="header">Want to Talk? Lets Get in Touch!</h1>
             <ContactForm />
             <Socials />
         </div>

@@ -9,7 +9,8 @@ export class ContactForm extends Component{
 
         this.state = {
             message: '',
-            email: ''
+            email: '',
+            name: ''
         }
     }
 
@@ -30,18 +31,19 @@ export class ContactForm extends Component{
         return (
            <div className="form-container">
                <form onSubmit={this.handleSubmit}>
-                <div className="form-section">
-                        <label>
-                            Contact Email: 
-                            <input className="email-input" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
-                        </label>
-                </div>
-                <div className="form-section">
-                    <label>Message: 
+                    <div className="form-section">
+                        <label>Name: </label>
+                        <input className="email-input" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
+                    </div>
+                    <div className="form-section">
+                        <label>Contact Email: </label>
+                        <input className="email-input" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
+                    </div>
+                    <div className="form-section">
+                        <label>Message:</label>
                         <textarea className="message-input" name="message" value={this.state.message} onChange={this.handleChange} id="" cols="30" rows="10"></textarea>
-                    </label>
-                </div>
-                <button type="submit">Submit</button>
+                    </div>
+                    <button type="submit">Submit</button>
                </form>
            </div>
         )

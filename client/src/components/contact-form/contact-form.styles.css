@@ -1,19 +1,37 @@
 .form-container {
     display: flex;
     justify-content: center;
-    color: #fff4e6;
-    width: 60%;
+    color:  #854442;
+    width: 60vw;
+    background-color: #fff4e6;
+    margin: 20px auto;
+    padding: 15px 10px;
+    border-radius: 5px;;
 }
 
 .form-section {
+    width: 90%;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .email-input {
-    margin-left: 10px;
-    width: 100%;
+    width: 900px;
+    background-color: #fff4e6;
+    border: 2px solid #854442;
+    padding: 7.5px;
 }
 
 .message-input {
-    margin-left: 10px;
+    width: 900px;
+    background-color: #fff4e6;
+    border: 2px solid #854442;
+    resize: none;
 }
