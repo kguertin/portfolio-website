@@ -20,5 +20,6 @@ exports.getProjects = async (req, res, next) => {
 }
 
 exports.postEmail = async (req, res, next) => {
-  console.log('hit')
+  console.log(req.body)
+  res.status(200).json({msg: 'email sent.'});
 }

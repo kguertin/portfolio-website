@@ -22,9 +22,22 @@ export class ContactForm extends Component{
     handleSubmit = e => {
         e.preventDefault();
 
+        const messageData = {
+            message: this.state.message,
+            email: this.state.email,
+            name: this.state.name
+        }
+
        fetch('http://localhost:8000/email', {
-           method: "POST"
+           method: "POST",
+           headers: {
+               "Content-Type": "application/json"
+           },
+           body: JSON.stringify(messageData)
        })
+       .then(res => res.json())
+       .then(res => console.log(res))
+       .catch(err => console.log(err));  
     }
 
     render() {
