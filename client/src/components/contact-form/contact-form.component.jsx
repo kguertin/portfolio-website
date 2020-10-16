@@ -25,7 +25,7 @@ export class ContactForm extends Component{
         const messageData = {
             message: this.state.message,
             email: this.state.email,
-            name: this.state.name
+            subject: this.state.subject
         }
 
        fetch('http://localhost:8000/email', {
@@ -45,8 +45,8 @@ export class ContactForm extends Component{
            <div className="form-container">
                <form onSubmit={this.handleSubmit}>
                     <div className="form-section">
-                        <label>Name: </label>
-                        <input className="email-input" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
+                        <label>Subject: </label>
+                        <input className="email-input" name="subject" type="text" value={this.state.subject} onChange={this.handleChange} />
                     </div>
                     <div className="form-section">
                         <label>Contact Email: </label>
