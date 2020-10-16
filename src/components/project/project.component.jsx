@@ -3,6 +3,7 @@ import React from 'react';
 import './project.styles.css';
 
 export const Project = ({project}) => {
+    console.log(project)
     return (
         <div className="project-card">
             <img src="" alt="project preview" />

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import './projects-section.styles.css';
+import projectData from './projectData';
+
 import { Skills } from '../skills/skills.component';
 import { Project } from '../project/project.component'; 
 
@@ -17,14 +19,16 @@ export class ProjectsSection extends Component{
      }
 
      componentDidMount() {
-          fetch('http://localhost:5000/getProjects', {
-               headers: {
-                    "Content-Type": 'application/json'
-               }
-          })
-          .then(response => response.json())
-          .then(projects => this.setState({projects: projects.projects}))
-          .catch(err => console.log(err)) 
+          console.log(projectData)
+          this.setState({projects: projectData})
+          // fetch('http://localhost:5000/getProjects', {
+          //      headers: {
+          //           "Content-Type": 'application/json'
+          //      }
+          // })
+          // .then(response => response.json())
+          // .then(projects => this.setState({projects: projectData}))
+          // .catch(err => console.log(err)) 
           
           this.setState({selectedSkills: this.state.skills})
      }
