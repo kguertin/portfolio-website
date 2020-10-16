@@ -43,7 +43,7 @@ export class ContactForm extends Component{
                         <label>Message:</label>
                         <textarea className="message-input" name="message" value={this.state.message} onChange={this.handleChange} id="" cols="30" rows="10"></textarea>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="submit-btn">Submit</button>
                </form>
            </div>
         )
