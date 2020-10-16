@@ -22,7 +22,7 @@ const projectData = [
         "imageUrl": "A Url",
         "description": "A react application that allows users to search for tweets by hashtag using the twitter api. Users can save tweets to a hashtag to view later.",
         "githubUrl": "https://github.com/kguertin/tweet-catcher",
-        "liveUrl": ""
+        "liveUrl": "https://tweet-catcher.herokuapp.com"
     }, 
     {
         id: 4,
